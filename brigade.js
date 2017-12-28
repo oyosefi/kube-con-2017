@@ -30,7 +30,7 @@ events.on("push", (brigadeEvent, project) => {
     // start pipeline
     console.log(`==> starting pipeline for docker image: ${brigConfig.get("apiACRImage")}:${brigConfig.get("imageTag")}`)
     var pipeline = new Group()
-    pipeline.add(slack)
+    //pipeline.add(slack)
     pipeline.add(golang)
     pipeline.add(docker)
     pipeline.add(helm)
@@ -71,13 +71,13 @@ events.on("pull_request", (brigadeEvent, project) => {
     // start pipeline
     console.log(`==> starting pipeline for docker image: ${brigConfig.get("apiACRImage")}:${brigConfig.get("imageTag")}`)
     var pipeline = new Group()
-    pipeline.add(slack)
+    //pipeline.add(slack)
     pipeline.add(golang)
     pipeline.add(docker)
     pipeline.add(helm)
     pipeline.runEach()
 })
-
+/*
 events.on("after", (event, proj) => {
     console.log("brigade pipeline finished successfully")
 
@@ -92,7 +92,7 @@ events.on("after", (event, proj) => {
 	slack.run()
     
 })
-
+*/
 function goJobRunner(g) {
     // define job for golang work
     g.storage.enabled = false
