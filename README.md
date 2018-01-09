@@ -14,4 +14,3 @@ You will need:
 * Docker Registry 
 
 
-Added a small change
