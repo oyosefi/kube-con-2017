@@ -12,3 +12,6 @@ You will need:
 * Istio
 * Brigade / Kashti
 * Docker Registry 
+
+
+Added a small change
